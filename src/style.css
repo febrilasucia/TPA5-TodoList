@@ -23,6 +23,8 @@ body {
 .form-todolist{
     text-align : center;
     margin: 50px 0 50px 0;
+    display: flex;
+    flex-wrap : wrap
 }
 
 .items{
@@ -30,13 +32,12 @@ body {
 }
 .card li .btn{
     display: flex;
-    width : 50px;
     margin : 0 10px 0 10px;
 
 }
 
 .btn button-delete {
-    text-align : center;
+    margin-left: 10px;
 }
 .btn button-edit {
     text-align : center;

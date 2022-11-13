@@ -1,7 +1,7 @@
 import { ADD_TODO, DELETE_TODO } from "../action/todoAction";
 
 const initialState = {
-  data: ["belajar redux", "redux itu gampang"],
+  data: [],
 };
 
 function todoReducer(state = initialState, action) {
@@ -13,7 +13,9 @@ function todoReducer(state = initialState, action) {
         data: [...state.data, action.payload],
       };
     case DELETE_TODO:
-        return{...state.data.filter((todo, index) => i!==action.payload)}
+      return {
+        data: state.data.filter((item, index) => index !== action.payload)
+      };
     default:
       return state;
   }
